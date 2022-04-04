@@ -1,0 +1,27 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+    private static Scanner in = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String s = in.next();
+        int j = 0;
+        boolean result = check(s, j);
+        if(result == true) {
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
+    }
+
+    private static boolean check(String s, int j) {
+        if(j == s.length() - 1) {
+            if(!(s.charAt(j) >= '0' && s.charAt(j) <= '9')) return false;
+            else return true;
+        }
+        if(!(s.charAt(j) >= '0' && s.charAt(j) <= '9')) {
+            return false;
+        }
+        return check(s, j + 1);
+    }
+}
