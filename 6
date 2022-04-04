@@ -1,0 +1,18 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int n = sc.nextInt();
+        System.out.println(pow(a,n));
+    }
+    public static int pow(int a,int n){
+    if(n==1) return a;
+    return a*pow(a,n-1); // 2*(2,2)--->2*(2*1)--->2
+                            // 5*(5*2)--->5*(5*1)--->5
+    }
+}
