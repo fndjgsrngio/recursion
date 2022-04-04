@@ -1,0 +1,26 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(prime(n));
+    }
+    public static boolean prime (int n){
+        boolean pr = true;
+        for (int p = 2; p < n; p++) {
+            if (n % p == 0) {
+                pr = false;
+                break;
+            }
+        }
+        if (pr)
+            System.out.println("prime");
+        else
+            System.out.println("not a prime");
+        return pr;
+    }
+}
